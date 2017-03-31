@@ -13,20 +13,21 @@ The python notebooks are written in [Jupyter](http://jupyter.org/).
   installed. Here is an [example script](https://gist.github.com/mli/b64322f446b2043e3350ddcbfa5957be) to install all these packages on Ubuntu.
 
   Intructions to setup on AWS instances to run the notebooks:
-  
+
   1.  Create an AWS account, and apply the student credit from [AWS Education](https://aws.amazon.com/education/awseducate).
 
   2.  Launch a g2.2xlarge or p2.2xlarge instance. The [AMI Ids](https://aws.amazon.com/marketplace/pp/B01M0AXXQB) that you can use:
-  
+
       | AWS Region Name       | Region      | AMI Id         |
       |-----------------------|-------------|----------------|
       | US West (Oregon)      | us-west-2   | `ami-dfb13ebf` |
       | US East (N. Virginia) | us-east-1   | `ami-e7c96af1` |
       | EU (Ireland)          | eu-west-1   | `ami-6e5d6808` |
-    
-      Remember to open the TCP port 22 and 8888 in the security group. You can modify the security group after you create the instance. 
+
+      Remember to open the TCP port 22 and 8888 in the security group. You can modify the security group after you create the instance.
       Find the Instances page at the EC2 Dashboard, and click the security group of the instance you created, which is at the last column.
-      In the Inbound tab, add SSH rule and customized TCP Rule with port 8888 from anywhere.
+      In the Inbound tab, add the SSH rule and customized TCP Rule with port 8888 from anywhere.
+      ![Inbound rules](./inbound_rules.png)
 
   3.  Once launch is succeed, setup the following variable with proper value
 
